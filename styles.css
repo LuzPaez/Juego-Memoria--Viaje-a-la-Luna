@@ -1,0 +1,121 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: url(./img/espacioFondo.gif) no-repeat center center fixed;
+    background-size: cover;
+    background-color: transparent; /* Hace el fondo transparente */
+}
+
+#titulo-juego {
+    font-size: 36px;
+    font-family: Arial Black, Helvetica, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#Sub-titulo-juego {
+    font-size: 26px;
+    font-family:monospace;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0px;
+    animation: sistema-danado 2s linear infinite alternate;
+}
+
+#contador-tiempo{
+    font-size: 26px;
+    font-family:monospace;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0px;
+    animation: sistema-danado 2s linear infinite alternate;
+}
+@keyframes sistema-danado {
+    0% {
+        text-shadow: 0 0 4px #4b0082, 0 0 6px white, 0 0 8px #4b0082;
+        color: #4b0082; /* Morado */
+    }
+    100% {
+        text-shadow: 0 0 4px #4b0082, 0 0 6px white, 0 0 8px #4b0082;
+        color: white;
+        transform: translateX(-2px) rotate(-1deg);
+    }
+}
+
+#contenedor {
+    padding: 20px;
+    width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #5d126c7a;
+    border-radius: 20px;
+}
+
+#area-juego img {
+    width: 128px;
+    height: 128px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#area-juego img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño en un 10% */
+}
+
+#area-estado {
+    font-family: monospace;
+    color: white;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: left;
+    margin-left: 40px;
+}
+
+#area-estado .mensaje-juego {
+    font-family: monospace;
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#area-estado button {
+    width:93%;
+    height: 60px;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: white;
+    color: #000c5b ;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 30px;
+    font-family: Arial Black, Helvetica, sans-serif;
+    transition: background-color 0.3s;
+
+}
+
+#area-estado button:hover {
+    background-color: #5d0097;
+    color: #ffffff;
+    animation: temblor 0.9s ;
+}
+
+/* Definir la regla @keyframes que hace temblar el botón */
+@keyframes temblor {
+    0%, 100% { transform: translate(0px, 0px); }
+    10%, 30%, 50%, 70%, 90% { transform: translate(2px, 0px); }
+    20%, 40%, 60%, 80% { transform: translate(0px, 0px); }
+  }
+  
